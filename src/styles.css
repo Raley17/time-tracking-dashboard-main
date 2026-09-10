@@ -1,0 +1,140 @@
+:root {
+  --pcolor-1: hsl(246, 80%, 60%);
+  --pcolor-2: hsl(15, 100%, 70%);
+  --pcolor-3: hsl(195, 74%, 62%);
+  --pcolor-4: hsl(348, 100%, 68%);
+  --pcolor-5: hsl(145, 58%, 55%);
+  --pcolor-6: hsl(264, 64%, 52%);
+  --pcolor-7: hsl(43, 84%, 65%);
+  --ncolor-1: hsl(226, 43%, 10%);
+  --ncolor-2: hsl(235, 46%, 20%);
+  --ncolor-3: hsl(235, 45%, 61%);
+  --ncolor-4: hsl(236, 100%, 87%);
+  --ncolor-5: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--ncolor-1);
+  color: var(--ncolor-5);
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ncolor-5);
+}
+
+.mainBox {
+  width: 18rem;
+  border-radius: 0.75rem;
+  background-color: var(--ncolor-2);
+  height: 10.5rem;
+
+  nav {
+    width: 18rem;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    a {
+      text-align: center;
+      font-weight: 400;
+      color: var(--ncolor-3);
+    }
+    .focused {
+      color: var(--ncolor-5);
+    }
+  }
+  .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 7rem;
+    border-radius: 0.75rem;
+    background-color: var(--pcolor-1);
+
+    img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50rem;
+      border: 2px solid var(--ncolor-5);
+    }
+    .name {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      justify-content: center;
+      color: var(--ncolor-4);
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+    span {
+      color: var(--ncolor-5);
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.box {
+  background-image: url(../images/icon-work.svg);
+  background-color: var(--pcolor-2);
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: 13rem -0.5rem;
+  margin-top: 4rem;
+  width: 18rem;
+  height: 8rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  .inbox {
+    width: 18rem;
+    height: 6rem;
+    border-radius: 0.75rem;
+    background-color: var(--ncolor-2);
+  }
+}
+
+.Daily {
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  .firstRow,
+  .secondRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.5rem;
+  }
+  .secondRow {
+    .hour {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    .yesterday {
+      color: var(--ncolor-4);
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.notActive {
+  opacity: 0;
+}
+
+.opacit {
+  opacity: 0;
+}
