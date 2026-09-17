@@ -153,10 +153,6 @@ main {
   }
 }
 
-.opacit {
-  opacity: 0;
-}
-
 .box.play {
   background-image: url(../images/icon-play.svg);
   background-color: var(--pcolor-3);
@@ -184,4 +180,88 @@ footer {
   width: 16rem;
   padding-bottom: 2rem;
   text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    width: 100vw;
+    height: 95vh;
+    justify-content: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.5rem;
+    .mainBox {
+      width: 12rem;
+      height: 25.5rem;
+
+      nav {
+        width: 12rem;
+        height: 7.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding: 0.75rem 0rem 0.75rem 1.5rem;
+
+        a {
+          text-align: start;
+          font-size: 0.875rem;
+        }
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        height: 18rem;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+        gap: 2rem;
+
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+    .inGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .box {
+    margin-top: 0;
+    width: 12rem;
+    height: 12rem;
+    background-position: 7rem -0.5rem;
+    .inbox {
+      width: 12rem;
+      height: 9.5rem;
+    }
+  }
+
+  .firstRow {
+    font-size: 0.875rem;
+  }
+
+  .secondRow {
+    flex-direction: column;
+    align-items: start;
+    .hour {
+      font-size: 2.5rem;
+      font-weight: 300;
+      padding-bottom: 0.5rem;
+    }
+    .previous {
+      color: var(--ncolor-4);
+      font-size: 0.75rem;
+    }
+  }
 }
