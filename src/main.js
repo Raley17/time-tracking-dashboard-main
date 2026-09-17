@@ -1,5 +1,7 @@
+// We make the timeframe a string so we can change it easily
 let activeTimeframe = "weekly";
 
+// We make a var so the function can initialise its process while fetch does its work.
 let jsonData = [];
 
 function updateCards(timeframe) {
@@ -15,6 +17,7 @@ function updateCards(timeframe) {
 fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
+    // Sustitute we give jsonData the value of the actual data.
     jsonData = data;
     updateCards(activeTimeframe);
   });
@@ -22,6 +25,8 @@ fetch("./data.json")
 const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
+    document.querySelector("nav a.focused").classList.remove("focused");
+    link.classList.add("focused");
     activeTimeframe = link.textContent.trim().toLowerCase();
     updateCards(activeTimeframe);
   });
