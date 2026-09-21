@@ -194,13 +194,15 @@ footer {
   main {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 0.5rem;
+    gap: 1rem;
+    border: 1px solid red;
+    margin-top: 4rem;
     .mainBox {
-      width: 12rem;
+      width: 13rem;
       height: 25.5rem;
 
       nav {
-        width: 12rem;
+        width: 13rem;
         height: 7.5rem;
         display: grid;
         grid-template-columns: 1fr;
@@ -240,11 +242,11 @@ footer {
 
   .box {
     margin-top: 0;
-    width: 12rem;
+    width: 13rem;
     height: 12rem;
     background-position: 7rem -0.5rem;
     .inbox {
-      width: 12rem;
+      width: 13rem;
       height: 9.5rem;
     }
   }
